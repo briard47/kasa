@@ -1,0 +1,24 @@
+.dropApropos {
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.drop__apropos {
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+@media screen and (max-width: 768px) {
+  .drop__apropos {
+    width: 100%;
+    padding-bottom: 40px;
+    gap: 10px;
+  }
+  .open {
+    margin-bottom: 10px;
+  }
+}/*# sourceMappingURL=about.css.map */
