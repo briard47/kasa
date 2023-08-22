@@ -9,7 +9,7 @@ function  Header() {
              <img src={Logo} alt='Logo Kasa' className='header__logo'></img>
             <nav className= 'header__nav'>
             <Link to='/'> Acceuil</Link>
-            <Link to='a-propos'>A propos</Link>
+            <Link to='/a-propos'>A propos</Link>
             </nav>
         </header>
     )

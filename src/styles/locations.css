@@ -1,0 +1,265 @@
+* {
+  font-family: "Montserrat", sans-serif;
+}
+
+.carrousel {
+  position: relative;
+}
+.carrousel__img {
+  width: 100%;
+  height: 415px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  z-index: 1;
+  border-radius: 20px;
+}
+.carrousel__arrow {
+  position: absolute;
+  bottom: 35%;
+  z-index: 3;
+  width: 96px;
+  height: 120px;
+  cursor: pointer;
+}
+.carrousel__arrow--right {
+  right: 20px;
+}
+.carrousel__arrow--left {
+  left: 20px;
+}
+.carrousel__counter {
+  position: absolute;
+  bottom: 20px;
+  right: 50%;
+  color: white;
+  font-size: 18px;
+  font-weight: 500;
+  letter-spacing: -2px;
+}
+
+.title {
+  display: flex;
+  flex-direction: row;
+  justify-content: normal;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  width: 100%;
+  color: #FF6060;
+  padding: 30px 0px;
+}
+.title__info {
+  width: 70%;
+}
+.title h1 {
+  font-size: 51px;
+  font-weight: 300;
+  line-height: 50px;
+  padding-bottom: 10px;
+}
+.title p {
+  font-size: 18px;
+  padding-bottom: 20px;
+}
+.title img {
+  border-radius: 50%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  width: 64px;
+}
+.title__name {
+  display: flex;
+  flex-direction: row;
+  justify-content: normal;
+  height: 64px;
+  align-items: center;
+}
+.title__name p {
+  width: 90px;
+}
+
+.retail {
+  display: flex;
+  flex-direction: row;
+  justify-content: normal;
+  justify-content: space-between;
+  width: 70%;
+}
+.retail__tagline {
+  display: flex;
+  flex-direction: row;
+  justify-content: normal;
+  gap: 15px;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.retail p {
+  color: white;
+  background-color: #FF6060;
+  padding: 5px 40px;
+  border-radius: 20px;
+  display: block;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.star {
+  display: flex;
+  width: 30%;
+  align-items: center;
+  justify-content: flex-end;
+}
+.star img {
+  width: 36px;
+  height: 36px;
+}
+
+.drop {
+  display: flex;
+  flex-direction: row;
+  justify-content: normal;
+  justify-content: space-between;
+  border-radius: 10px;
+  gap: 50px;
+}
+
+.dropdown {
+  width: 100%;
+}
+.dropdown__config {
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  border-radius: 10px;
+  color: white;
+  font-size: 18px;
+  background-color: #FF6060;
+}
+.dropdown__config--content {
+  overflow: hidden;
+  background-color: #F6F6F6;
+  color: #FF6060;
+  font-size: 18px;
+  font-weight: 300;
+  line-height: 25px;
+  max-height: 0;
+  opacity: 0;
+  transition: all 300ms ease-in-out;
+}
+.dropdown__config--content ul {
+  padding: 20px;
+}
+.dropdown__config--content li {
+  list-style-type: none;
+}
+.dropdown__config--content p {
+  padding: 20px;
+}
+
+.open {
+  max-height: 300px;
+  opacity: 1;
+}
+
+.close {
+  max-height: 0;
+  opacity: 0;
+}
+
+.rotated {
+  transition: all 200ms ease-in-out;
+  transform: rotate(180deg);
+}
+
+.arrow {
+  transition: all 200ms ease-in-out;
+  transform: rotate(0deg);
+}
+
+@media screen and (max-width: 768px) {
+  .title__info h1 {
+    font-size: 34px;
+  }
+  .title {
+    width: 100%;
+  }
+  .title p {
+    font-size: 14px;
+  }
+  .title__info {
+    width: 100%;
+    font-size: 16px;
+  }
+  .title__name {
+    order: 4;
+    width: auto;
+  }
+  .retail {
+    width: 100%;
+    padding: 20px 0px;
+  }
+  .drop {
+    flex-direction: column;
+    gap: 35px;
+  }
+  .dropdown__config--content {
+    padding: 10px;
+  }
+  .carrousel__counter {
+    display: none;
+  }
+  .star {
+    align-items: center;
+    display: flex;
+    justify-content: flex-start;
+  }
+  .star img {
+    width: 18px;
+    height: 18px;
+  }
+  .carrousel__arrow {
+    width: 24px;
+    height: 24px;
+    bottom: 45%;
+  }
+  .carrousel__img {
+    height: 255px;
+  }
+}
+@media screen and (max-width: 425px) {
+  .title p {
+    font-size: 14px;
+  }
+  .title img {
+    width: 32px;
+  }
+  .retail__tagline p {
+    font-size: 10px;
+  }
+  .drop {
+    gap: 20px;
+  }
+  .dropdown__config {
+    padding: 5px;
+  }
+  .dropdown__config--text {
+    font-size: 13px;
+  }
+  .dropdown__config--content {
+    font-size: 13px;
+    padding: 10px;
+  }
+  .dropdown__config--content ul {
+    padding: 0px;
+  }
+  .title__name {
+    display: flex;
+    align-items: center;
+  }
+  .title__name p {
+    font-size: 12px;
+    flex-wrap: wrap;
+    width: 50%;
+  }
+}/*# sourceMappingURL=locations.css.map */

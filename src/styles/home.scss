@@ -28,7 +28,7 @@ $color-card: #F6F6F6;
         
     }
     
-    
+ 
     &__div::before{
         content: "";
         background: linear-gradient(180deg, rgba(2, 2, 2, 0.12) 61%, rgb(4 4 4 / 51%) 81%);    
@@ -54,6 +54,7 @@ $color-card: #F6F6F6;
     &__div:hover::after {
         opacity: 1;
     }
+
 & img {
     @include border-radius(20px);
     object-fit: cover;
@@ -82,10 +83,11 @@ $color-card: #F6F6F6;
 padding: 0px 0px 40px;
 position: relative;
 & img{
-    width: 95%;    
+    width: 100%;    
     max-height: 223px;
+    margin-top: 20px;
+    margin-bottom:20px;
     object-fit: cover;
-    margin:50px;
     @include border-radius(30px);
     filter:brightness(0.6);
 }
