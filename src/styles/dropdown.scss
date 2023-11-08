@@ -9,14 +9,6 @@
 $primary-color : #FF6060;
 $color-card: #F6F6F6;
 
-.drop {
-    @include flex (row, normal);
-    justify-content:space-between;
-    @include border-radius(10px);
-    gap:50px;
-    margin-top:30px;
-    margin-bottom:30px;
-}
 .dropdown {
     width: 100%;
     
@@ -30,7 +22,11 @@ $color-card: #F6F6F6;
         color: white;
         font-size:18px;
         background-color: $primary-color;
-
+        &--text  {
+            @media  screen and (max-width:425px){
+                font-size: 13px;
+            }
+        }
         &--content {
             overflow: hidden;
             background-color: $color-card;
@@ -41,28 +37,56 @@ $color-card: #F6F6F6;
             max-height: 0;
             opacity: 0;
             transition: all 300ms ease-in-out;
-
+            @media  screen and (max-width:425px){
+                font-size: 13px;
+                padding: 10px;
+            }
         }
         &--content ul {
             padding: 20px;
+            @media  screen and (max-width:425px){
+                padding: 0px;
+            }
         }
         &--content li{
         list-style-type: none;
 
-    }
+        }
         &--content p {
             padding: 20px;
 
         }
+        @media  screen and (max-width:768px){
+            line-height: 20px;
+            padding: 15px;            
+        }
+        @media  screen and (max-width:425px) {
+            padding: 5px;
+        }
 }
 }
+
 .open {
     max-height: 300px;
     opacity: 1;
-
+    @media screen and (max-width : 768px){
+        .open {
+         margin-bottom: 10px;
+        }
+     }
 
 }
 .close{
     max-height: 0;
     opacity: 0;
 }
+
+.rotated {
+    transition: all 200ms ease-in-out;
+    transform: rotate(180deg);
+  }
+  
+  .arrow {
+    transition: all 200ms ease-in-out;
+    transform: rotate(0deg);
+  }

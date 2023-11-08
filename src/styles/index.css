@@ -1,18 +1,28 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,400;0,500;0,700;0,900;1,400;1,500;1,700;1,900&family=Shrikhand&display=swap");
 body {
   font-family: "Montserrat", sans-serif;
+  margin: 0;
+}
+
+main {
+  margin: 40px;
   padding-left: 50px;
   padding-right: 50px;
 }
-
-main, header {
-  margin: 40px;
+@media screen and (max-width: 1024px) {
+  main {
+    margin: 20px;
+    padding: 10px;
+  }
 }
 
 .header {
+  padding-left: 50px;
+  padding-right: 50px;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  margin: 40px;
 }
 .header__nav {
   display: flex;
@@ -22,6 +32,11 @@ main, header {
   font-size: 24px;
   gap: 50px;
 }
+@media screen and (max-width: 768px) {
+  .header__nav {
+    gap: 20px;
+  }
+}
 .header__nav a {
   text-decoration: none;
   color: #FF6060;
@@ -30,9 +45,30 @@ main, header {
 .header__nav a:hover {
   text-decoration: underline;
 }
+@media screen and (max-width: 768px) {
+  .header__nav a {
+    padding-top: 20px;
+    font-size: 14px;
+    text-transform: uppercase;
+  }
+}
 .header__logo {
   width: 210px;
   height: 68px;
+}
+@media screen and (max-width: 768px) {
+  .header__logo {
+    width: 145px;
+    height: 47px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .header {
+    margin: 20px;
+    padding-left: 10px;
+    padding-right: 10px;
+    gap: 20px;
+  }
 }
 
 footer {
@@ -54,4 +90,16 @@ footer img {
 }
 footer p {
   font-size: 24px;
+}
+@media screen and (max-width: 768px) {
+  footer p {
+    font-size: 12px;
+    width: 130px;
+    text-align: center;
+  }
+}
+@media screen and (max-width: 768px) {
+  footer {
+    gap: 20px;
+  }
 }/*# sourceMappingURL=index.css.map */

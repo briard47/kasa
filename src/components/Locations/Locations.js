@@ -1,23 +1,26 @@
-import React from "react";
-import {useParams} from "react-router-dom";
+import React, {useEffect} from "react";
+import {useNavigate} from "react-router-dom";
 import Footer from '../Footer/Footer.js';
 import  Header from '../Header/Header.js';
-import Error from '../Error/Error.js';
+import LogementParam from "../LogementParam/LogementParam.js"
 import Carrousel from "../Carrousel/Carrousel.js";
 import LocationTitle from "../LocationTitle/LocationTitle.js";
 import Dropdown from '../Dropdown/Dropdown.js';
-import logements from '../../assets/logements.json'
 import "../../styles/locations.css"
 import '../../styles/index.css'
 
 
 const Locations = () => {
-    const { id } = useParams()
-    const logement = logements.find((item) => item.id === id)
-    if (typeof(logement) == 'undefined') {
-        return <Error />
-    };
-   
+    const logement = LogementParam();
+    const navigate = useNavigate();
+    useEffect(() => {
+          if (typeof(logement) == 'undefined') {
+        navigate ("/erreur404")
+     };
+      }, [logement, navigate]);
+      if (typeof(logement) == 'undefined'){
+      return null}
+
     return (
         <div>
             <Header />

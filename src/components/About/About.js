@@ -10,9 +10,10 @@ import "../../styles/about.css"
     return (
         <div>
             <Header />
-            <Banner banner={Image} alt="Photos de Montagne" />
-            <section className="drop dropApropos">
-                    <div className="drop__apropos">
+            <main>
+            <Banner banner={Image} alt="Photos de Montagne" className="banner--about" />
+            <section className="drop dropAbout">
+                    <div className="drop__about">
                         <Dropdown text="Fiabilité">
                             <p>Les annonces postées sur Kasa garantissent une fiabilité totale. Les photos sont conformes
                                 aux logements, et toutes les informations sont régulièrement vérifiées par nos équipes.
@@ -37,6 +38,7 @@ import "../../styles/about.css"
                         </Dropdown>
                     </div>
                 </section>
+            </main>    
             <Footer />
         </div>
     )

@@ -1,23 +1,20 @@
-.dropApropos {
+.dropAbout {
     padding: 0;
     display: flex;
     align-items: center;
     justify-content: center;
     
 }
-.drop__apropos {
+.drop__about {
     width: 80%;
     display: flex;
     flex-direction: column;
     gap: 30px;
 }
-@media screen and (max-width : 768px){
-   .drop__apropos {
-    width: 100%;
-    padding-bottom: 40px;
-    gap:10px;
-   }
-   .open {
-    margin-bottom: 10px;
-   }
-}
+
+.banner--about {
+    height:230px;
+    @media screen and (max-width:1024px) { 
+    height: 350px;
+    }
+ }

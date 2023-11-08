@@ -11,22 +11,32 @@ $primary-color : #FF6060;
 
 body{
     font-family: 'Montserrat', sans-serif;
-    padding-left: 50px;
-    padding-right: 50px;
+    margin:0;
 }
 
-main, header {
+main {
     margin: 40px;  
+    padding-left: 50px;
+    padding-right: 50px;
+    @media  screen and (max-width:1024px) {     
+            margin: 20px;
+            padding:10px
+    }
 }
 .header {
+    padding-left: 50px;
+    padding-right: 50px;
     @include flex(row, space-between);
-   
+    margin: 40px; 
 
 &__nav{
     @include flex(row, space-between);
     color: $primary-color;
     font-size:24px;
     gap:50px;
+    @media  screen and (max-width:768px){
+         gap:20px;
+    }
 }
 &__nav a {
     text-decoration: none;
@@ -35,10 +45,26 @@ main, header {
     &:hover {
         text-decoration: underline;
     }
+    @media  screen and (max-width:768px){
+        padding-top: 20px;
+        
+        font-size: 14px;
+        text-transform: uppercase;
+    }
 }
 &__logo {
     width: 210px;
     height: 68px;
+    @media  screen and (max-width:768px){
+        width: 145px;
+        height: 47px; 
+    }
+}
+@media  screen and (max-width:768px){
+    margin: 20px;
+    padding-left: 10px;
+    padding-right: 10px;
+    gap:20px
 }
 }
 footer {
@@ -58,5 +84,15 @@ footer {
     }
     & p {
         font-size: 24px;
+        @media  screen and (max-width:768px){
+            font-size: 12px;
+            width: 130px;
+            text-align: center;
+        }
     }
+    @media  screen and (max-width:768px){
+         gap: 20px;
     }
+}
+
+    
