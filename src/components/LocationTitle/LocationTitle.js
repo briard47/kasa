@@ -1,9 +1,9 @@
 
 import starActive from "../../assets/images/star-active 1.png"
 import starInactive from "../../assets/images/star-inactive 1.png"
-import LogementParam from "../LogementParam/LogementParam"
+import LogementParam from "../../assets/LogementParam/LogementParam"
 
-const LocationTitle = () => {
+function LocationTitle() {
     const logement = LogementParam();
     const rating = logement.rating;
     const maxRating = 5;

@@ -1,7 +1,7 @@
 import React from 'react';
 import Header from '../Header/Header.js';
 import Banner from "../Banner/Banner.js";
-import Cards from "../Cards/Cards.js";
+import Cards from "../Cardscontainer/Cardscontainer.js";
 import Footer from '../Footer/Footer.js';
 import '../../styles/index.css'
 import '../../styles/home.css'

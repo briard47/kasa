@@ -2,7 +2,6 @@
   background-color: #F6F6F6;
   border-radius: 20px;
   padding: 30px;
-  cursor: pointer;
 }
 .card__style {
   display: grid;
@@ -25,6 +24,7 @@
   height: 340px;
   border-radius: 20px;
   position: relative;
+  cursor: pointer;
 }
 @media screen and (max-width: 1160px) {
   .card__div {
@@ -35,31 +35,6 @@
   .card__div {
     width: 100%;
   }
-}
-.card__div::before {
-  content: "";
-  background: linear-gradient(180deg, rgba(2, 2, 2, 0.12) 61%, rgba(4, 4, 4, 0.51) 81%);
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  border-radius: 20px;
-  transition: all 1500ms ease-in-out;
-  opacity: 1;
-}
-.card__div::after {
-  content: "";
-  background: linear-gradient(0deg, rgb(255, 96, 96) 0%, rgba(0, 0, 0, 0) 88%);
-  position: absolute;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  border-radius: 20px;
-  transition: all 300ms ease-in-out;
-  opacity: 0;
-  z-index: 2;
-}
-.card__div:hover::after {
-  opacity: 1;
 }
 .card img {
   border-radius: 20px;

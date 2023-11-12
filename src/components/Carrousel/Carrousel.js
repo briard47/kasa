@@ -2,7 +2,7 @@ import React, { useState } from "react"
 import ArrowRight from '../../assets/images/arrow_right.png'
 import ArrowLeft from '../../assets/images/arrow_left.png'
 import "../../styles/locations.css"
-import LogementParam from "../LogementParam/LogementParam.js"
+import LogementParam from "../../assets/LogementParam/LogementParam.js"
 
 function Carrousel() {
     const logement = LogementParam();
@@ -11,18 +11,16 @@ function Carrousel() {
         return `${currentImageIndex + 1} / ${logement.pictures.length}`;
     };
     const nextImage = () => {
-        setCurrentImageIndex((nextIndex) => (nextIndex + 1) % logement.pictures.length);
+        setCurrentImageIndex((Index) => 
+        Index===logement.pictures.length-1? 0 :(Index + 1) );
     };
 
     const previousImage = () => {
-        setCurrentImageIndex((prevIndex) =>
-            prevIndex === 0 ? logement.pictures.length - 1 : (prevIndex - 1) % logement.pictures.length
+        setCurrentImageIndex((Index) =>
+            Index === 0 ? logement.pictures.length - 1 : (Index - 1) 
         );
     };
     const currentImage = logement.pictures[currentImageIndex]
-
-    console.log(currentImageIndex)
-    console.log(Counter())
     if (logement.pictures.length === 1) {
         return (
             <section className="carrousel">
